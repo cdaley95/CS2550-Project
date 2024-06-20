@@ -1,0 +1,122 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video video {
+    min-width: 100%;
+    min-height: 100%;
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "sidebar main padding";
+    grid-template-columns: 120px 1fr 120px; /* Adjusted padding column to 120px */
+    height: 100vh;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    overflow: hidden;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    white-space: nowrap;
+    transition: min-width 0.3s, max-width 0.3s; /* Added transition for max-width */
+    max-width: 40px; /* Initial max-width for collapsed state */
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background 0.3s, max-width 0.3s; /* Added transition for max-width */
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    min-width: 28px;
+}
+
+.sidebar ul li a span {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar:hover ul li a span {
+    opacity: 1;
+}
+
+.sidebar ul li:hover {
+    min-width: 120px; /* Expanded max-width on hover */
+    max-width: 120px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    overflow-y: auto;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.padding {
+    grid-area: padding;
+    background: transparent; /* Can be adjusted or removed */
+}

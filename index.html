@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost in the Forest</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/*" href="images/favicon.png"/>
+</head>
+<body>
+    <div class="background-video">
+        <video autoplay muted loop id="bgVideo">
+            <source src="videos/bgvid.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" onclick="showSection('home')"><i class=" fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="#" onclick="showSection('contact')"><i class=" fas fa-info-circle"></i><span>Contact</span></a></li>
+                <li><a href="#" onclick="showSection('guide')"><i class=" fas fa-key"></i><span>Guide</span></a></li>
+                <li><a href="#" onclick="showSection('endings')"><i class=" fas fa-flag"></i><span>Endings</span></a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="content active" id="home">
+                <header class="header">
+                    <h1>Lost in the Forest</h1>
+                </header>
+                <p>This is the content of Section 1.</p>
+            </div>
+            <div class="content" id="contact">
+                <header class="header">
+                    <h1>Contact</h1>
+                </header>
+                <p>This is the content of Section 2.</p>
+            </div>
+            <div class="content" id="guide">
+                <header class="header">
+                    <h1>Guide</h1>
+                </header>
+                <p>This is the content of Section 3.</p>
+            </div>
+            <div class="content" id="endings">
+                <header class="header">
+                    <h1>Endings</h1>
+                </header>
+                <p>This is the content of Section 4.</p>
+            </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
