@@ -1,11 +1,24 @@
 function showSection(sectionId) {
-    // Hide all sections
     var sections = document.querySelectorAll('.content');
     sections.forEach(function(section) {
-        section.classList.remove('active');
+        if (section.classList.contains('active')) {
+            section.classList.add('fade-out');
+            section.classList.remove('fade-in');
+            section.addEventListener('animationend', function() {
+                section.classList.remove('active', 'fade-out');
+                section.style.display = 'none';
+                var selectedSection = document.getElementById(sectionId);
+                selectedSection.style.display = 'block';
+                selectedSection.classList.add('fade-in');
+                selectedSection.classList.add('active');
+            }, { once: true });
+        }
     });
-
-    // Show the selected section
-    var selectedSection = document.getElementById(sectionId);
-    selectedSection.classList.add('active');
+    var activeSection = document.querySelector('.content.active');
+    if (!activeSection) {
+        var selectedSection = document.getElementById(sectionId);
+        selectedSection.style.display = 'block';
+        selectedSection.classList.add('fade-in');
+        selectedSection.classList.add('active');
+    }
 }
