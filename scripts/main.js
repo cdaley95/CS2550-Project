@@ -8,7 +8,7 @@ function showSection(sectionId) {
                 section.classList.remove('active', 'fade-out');
                 section.style.display = 'none';
                 var selectedSection = document.getElementById(sectionId);
-                selectedSection.style.display = 'block';
+                selectedSection.style.display = 'flex';
                 selectedSection.classList.add('fade-in');
                 selectedSection.classList.add('active');
             }, { once: true });
@@ -17,7 +17,7 @@ function showSection(sectionId) {
     var activeSection = document.querySelector('.content.active');
     if (!activeSection) {
         var selectedSection = document.getElementById(sectionId);
-        selectedSection.style.display = 'block';
+        selectedSection.style.display = 'flex';
         selectedSection.classList.add('fade-in');
         selectedSection.classList.add('active');
     }
