@@ -4,6 +4,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 .background-video {
@@ -42,8 +43,9 @@ body, html {
 
 .sidebar {
     grid-area: sidebar;
-    overflow: hidden;
+    overflow-y: auto;
     justify-self: left;
+    position: fixed;
 }
 
 .sidebar ul {
@@ -69,6 +71,11 @@ body, html {
 
 .sidebar ul li a {
     color: white;
+    text-shadow:
+        1px 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
     text-decoration: none;
     font-size: 18px;
     display: flex;
@@ -100,14 +107,18 @@ body, html {
 }
 
 .header {
-    grid-area: head;
-    height: 90%; 
+    grid-area: head; 
     width:100%;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
+    text-shadow:
+        1px 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
     padding: 10px;
     margin-bottom: 20px;
 }
@@ -136,7 +147,6 @@ main {
     padding: 20px;
     box-sizing: border-box;
     color: white;
-    overflow-y: auto;
 }
 
 @keyframes fadeIn {
@@ -199,9 +209,24 @@ content.hide {
     background-repeat: repeat;
     box-sizing: border-box;
     box-shadow: inset 0 0 10px #312201;
-    width: 100%;
+    width: 80%;
     align-items: center;
     text-align: center;
+    padding: 30px;
+    margin: 20px;
+}
+
+.incontent p {
+    color: #fff;
+    text-shadow:
+        1px 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
+}
+
+.incontent .ended {
+    font-weight: bold;
 }
 
 .btndiv {
@@ -211,13 +236,20 @@ content.hide {
 }
 
 .btn {
-    background-color: grey;
+    background-image: radial-gradient(rgb(0, 117, 0), rgb(105, 233, 105));
     color: black;
     padding: 14px 25px;
     text-align: center;
     display: inline-block;
     border: 1px solid black;
     text-decoration: none; /* Ensure links look like buttons */
+    color: white;
+    text-shadow:
+        1px 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
+    box-shadow: 0 0 10px #312201;
 }
 
 .btn:hover, .btn:active {
@@ -246,9 +278,16 @@ footer {
     /*background-image: url("../images/background.jpg");*/
     background-image: url("../images/repeat.jpg");
     background-repeat: repeat;
+    max-width: 100%;
+    width: 100%;
 }
 
 .footer-content a {
     text-decoration: none;
     color: white;
+    text-shadow:
+        1px 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
 }

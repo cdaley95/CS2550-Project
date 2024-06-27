@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lost in the Forest</title>
+    <title>Journey in the Forest</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/*" href="images/favicon.png"/>
@@ -30,20 +30,22 @@
             <!--Home-->
             <section class="content active" id="home">
                 <header class="header">
-                    <h1>Lost in the Forest</h1>
+                    <h1>Journey in the Forest</h1>
                     <figure class="captimage">
-                        <img src="./images/figcaption.png" alt="Forest Path">
-                        <figcaption>Choose to enter or leave</figcaption>
+                        <img src="./images/start.jfif" alt="Forest Path">
+                        <figcaption>At the edge of the forest, sunlight dances through the leaves, inviting exploration</figcaption>
                     </figure>
                 </header>
                 <article class="incontent">
-                    <p>Placeholder content for the home page</p>
+                    <p>You stand at the edge of a dense forest, the sun filtering through the leaves, casting dappled shadows on the ground.
+                        The path before you beckons, an invitation to explore the unknown. The air is fresh and filled with the scent of pine and earth.
+                        Birds sing from the treetops, and a light breeze rustles the leaves. You take a deep breath, feeling the weight of decision.</p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('branch1')">
-                            You choose to proceed
+                            Enter the forest
                         </a>
-                        <a class="btn" href="https://www.google.com/">
-                            You choose to leave
+                        <a class="btn" href="#" onclick="showSection('leaving')">
+                            Leave
                         </a>
                     </div>
                 </article>
@@ -51,122 +53,190 @@
             <!--Branches-->
             <section class="content" id="branch1">
                 <header class="header">
-                    <h1>Lost in the Forest</h1>
+                    <h1>Forest Fork</h1>
+                    <figure class="captimage">
+                        <img src="./images/branch1.jfif" alt="Forest Path">
+                        <figcaption>Where paths diverge, the forest whispers secrets of two distinct journeys under its leafy canopy.</figcaption>
+                    </figure>
                 </header>
                 <article class="incontent">
-                    <p>Placeholder content for the branch 1 page</p>
+                    <p>You step into the forest, the sound of birdsong and the rustle of leaves greeting you.
+                        Ahead, the path splits into two. The left path is narrow, winding deeper into the forest, while the right path is wider and well-trodden.
+                        The forest feels alive around you, with the rustling of small creatures in the underbrush and the distant call of a woodpecker echoing through the trees.
+                        Which path will you take?</p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('ending1')">
-                            You choose to go left
+                            Take the left path
                         </a>
                         <a class="btn" href="#" onclick="showSection('branch2')">
-                            You choose to go right
+                            Take the right path
                         </a>
                         <a class="btn" href="#" onclick="showSection('home')">
-                            You choose to go back
+                            Go back
                         </a>
                     </div>
                 </article>
             </section>
             <section class="content" id="branch2">
                 <header class="header">
-                    <h1>Lost in the Forest</h1>
+                    <h1>Whispering Fork</h1>
+                    <figure class="captimage">
+                        <img src="./images/branch2.jfif" alt="Forest Path">
+                        <figcaption>Choices unfold in a forest clearing, where paths diverge under the canopy.</figcaption>
+                    </figure>
                 </header>
                 <article class="incontent">
-                    <p>Placeholder content for the branch 2 page</p>
+                    <p>The right path is well-trodden, leading you to a small clearing with two further options.
+                        The path forks again, one leading to a sturdy wooden bridge, the other to an overgrown, less-traveled route.
+                        The air is filled with the scent of wildflowers, and you can hear the distant sound of running water.
+                        You pause for a moment, considering your options. Will you take the bridge or the overgrown path, or return to the previous fork?</p>
                     <div class="btndiv">
-                        <a class="btn" href="#" onclick="showSection('ending2')">
-                            You choose to go across the bridge
-                        </a>
                         <a class="btn" href="#" onclick="showSection('branch3')">
-                            You choose to take the overgrown path
+                            Take the overgrown path
+                        </a>
+                        <a class="btn" href="#" onclick="showSection('ending2')">
+                            Take the bridge
                         </a>
                         <a class="btn" href="#" onclick="showSection('branch1')">
-                            You choose to go back
+                            Go back
                         </a>
                     </div>
                 </article>
             </section>
             <section class="content" id="branch3">
                 <header class="header">
-                    <h1>Lost in the Forest</h1>
+                    <h1>Hidden Trail</h1>
+                    <figure class="captimage">
+                        <img src="./images/branch3.jfif" alt="Forest Path">
+                        <figcaption>Through dense foliage, a hidden path reveals untamed wonders of the forest.</figcaption>
+                    </figure>
                 </header>
                 <article class="incontent">
-                    <p>Placeholder content for the branch 3 page</p>
+                    <p>The overgrown path is narrow and difficult to navigate, but it leads you to another fork in the road.
+                        The foliage thickens, and you find yourself in a more untamed part of the forest. The air is cooler here, and the sounds of the forest are more pronounced.
+                        You feel a sense of adventure as you push through the underbrush, discovering a hidden part of the forest that few have seen. Which path will you take?</p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('ending3')">
-                            You choose to cross the stream
+                            Cross the stream
                         </a>
                         <a class="btn" href="#" onclick="showSection('ending4')">
-                            You choose to take the high path
+                            Take the high path
                         </a>
                         <a class="btn" href="#" onclick="showSection('branch2')">
-                            You choose to go back
+                            Go back
                         </a>
                     </div>
                 </article>
             </section>
             <!--Endings-->
-            <section class="content" id="ending1">
+            <section class="content" id="leaving">
                 <header class="header">
-                    <h1>Lost in the Forest</h1>
+                    <h1>Return to Comfort</h1>
+                    <figure class="captimage">
+                        <img src="./images/leave.jfif" alt="Forest Path">
+                        <figcaption>Choosing familiarity, the forest's mysteries await another day.</figcaption>
+                    </figure>
                 </header>
                 <article class="incontent">
-                    <p>Placeholder content for the ending 1 page</p>
+                    <p>You decide not to enter the forest, turning back to the familiar comforts of home. Perhaps another day, you'll explore the mysteries of the forest.
+                        For now, you are content to leave the adventure for another time, carrying the sense of curiosity and wonder with you.</p>
+                </article>
+            </section>
+            <section class="content" id="ending1">
+                <header class="header">
+                    <h1>Serenity Clearing</h1>
+                    <figure class="captimage">
+                        <img src="./images/ending1.jfif" alt="Forest Path">
+                        <figcaption>A tranquil clearing in the heart of the forest offers a peaceful refuge.</figcaption>
+                    </figure>
+                </header>
+                <article class="incontent">
+                    <p>The left path winds deeper into the forest, the trees closing in around you.
+                        The canopy above thickens, casting dappled shadows on the forest floor.
+                        After walking for a while, you find yourself in a peaceful clearing surrounded by tall trees.
+                        The sunlight filters through the leaves, creating a serene, almost magical atmosphere.
+                        You sit on a fallen log, the gentle breeze rustling the leaves, and feel a sense of calm wash over you.
+                        This is a place where time seems to stand still, a perfect spot to rest and reflect on your journey.
+                        You can choose to return to the start or go back to the fork.</p>
+                    <p class="ended">Ending 1: You find a peaceful clearing, a perfect spot to rest and reflect.</p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('home')">
-                            You choose to go to the start
+                            Go back to the start
                         </a>
                         <a class="btn" href="#" onclick="showSection('branch1')">
-                            You choose to go back
+                            Go back to the Forest Fork
                         </a>
                     </div>
                 </article>
             </section>
             <section class="content" id="ending2">
                 <header class="header">
-                    <h1>Lost in the Forest</h1>
+                    <h1>Homestead Crossing</h1>
+                    <figure class="captimage">
+                        <img src="./images/ending2.jfif" alt="Forest Path">
+                        <figcaption>A rustic cabin by a babbling brook beckons with warmth and solace.</figcaption>
+                    </figure>
                 </header>
                 <article class="incontent">
-                    <p>Placeholder content for the ending 2 page</p>
+                    <p>The bridge creaks under your feet as you cross a sparkling stream. On the other side, you find a quaint cabin nestled among the trees.
+                        Smoke curls from the chimney, and the smell of woodsmoke and pine fills the air.
+                        You approach the cabin and peek inside to find a warm, inviting space. A fire crackles in the hearth, and a cozy chair sits by the window, offering a view of the forest outside.
+                        The cabin offers warmth and shelter, a cozy retreat from the world. You decide to stay a while, enjoying the comfort and solitude. Will you go back to the fork or return to the start?</p>
+                    <p class="ended">Ending 2: The cabin offers warmth and shelter, a cozy retreat from the world.</p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('home')">
-                            You choose to go to the start
+                            Go back to the start
                         </a>
                         <a class="btn" href="#" onclick="showSection('branch2')">
-                            You choose to go back
+                            Go back to the Whispering Fork
                         </a>
                     </div>
                 </article>
             </section>
             <section class="content" id="ending3">
                 <header class="header">
-                    <h1>Lost in the Forest</h1>
+                    <h1>Waterfall Haven</h1>
+                    <figure class="captimage">
+                        <img src="./images/ending3.jfif" alt="Forest Path">
+                        <figcaption>Discovering a hidden waterfall, nature's beauty unfolds in serene splendor.</figcaption>
+                    </figure>
                 </header>
                 <article class="incontent">
-                    <p>Placeholder content for the ending 3 page</p>
+                    <p>You carefully wade across the stream, the cool water refreshing your feet.
+                        On the other side, a hidden waterfall awaits. The sound of rushing water is soothing, and you spot a small, secluded pool at the base of the waterfall.
+                        You sit on a rock, watching the water cascade down, creating a fine mist that cools the air.
+                        This hidden gem within the forest is a perfect spot to rest and admire nature's beauty. You spend some time here, feeling rejuvenated by the tranquil surroundings.
+                        Will you go back to the fork or return to the start?</p>
+                    <p class="ended">Ending 3: The waterfall is a breathtaking sight, a hidden gem within the forest.</p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('home')">
-                            You choose to go to the start
+                            Go back to the start
                         </a>
                         <a class="btn" href="#" onclick="showSection('branch3')">
-                            You choose to go back
+                            Go back to the Hidden Trail
                         </a>
                     </div>
                 </article>
             </section>
             <section class="content" id="ending4">
                 <header class="header">
-                    <h1>Lost in the Forest</h1>
+                    <h1>Sunset Ridge</h1>
+                    <figure class="captimage">
+                        <img src="./images/ending4.jfif" alt="Forest Path">
+                        <figcaption>Atop a rugged path, a breathtaking sunset paints the forest in hues of gold.</figcaption>
+                    </figure>
                 </header>
                 <article class="incontent">
-                    <p>Placeholder content for the ending 4 page</p>
+                    <p>The high path climbs steadily, offering stunning views of the forest canopy below. After a challenging hike, you reach the top, where a panoramic vista stretches out before you.
+                        The sunset casts a golden glow over the landscape, painting the sky with hues of pink and orange. You sit on a rocky outcrop, taking in the breathtaking scenery and feeling a sense of accomplishment.
+                        The beauty of this moment makes the journey worthwhile. Will you go back to the fork or return to the start?</p>
+                    <p class="ended">Ending 4: At the top, you find a panoramic vista, a perfect spot to watch the sunset.</p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('home')">
-                            You choose to go to the start
+                            Go back to the start
                         </a>
                         <a class="btn" href="#" onclick="showSection('branch3')">
-                            You choose to go back
+                            Go back to the Hidden Trail
                         </a>
                     </div>
                 </article>
