@@ -217,9 +217,24 @@ content.hide {
     text-align: center;
     padding: 30px;
     margin: 20px;
+    color: #fff;
+    text-shadow:
+        1px 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
 }
 
 .incontent p {
+    color: #fff;
+    text-shadow:
+        1px 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
+}
+
+.incontent p a {
     color: #fff;
     text-shadow:
         1px 1px 0 #000,
