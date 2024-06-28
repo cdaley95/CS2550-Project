@@ -328,7 +328,7 @@ footer {
     }
 
     .sidebar ul li {
-        box-shadow: inset 0 0 10px #312201;
+        box-shadow: none;
         overflow: hidden;
         white-space: nowrap;
         transition: min-width 0.3s, max-width 0.3s;
@@ -336,6 +336,7 @@ footer {
         min-width: 40px;
         display: flex;
         align-items: center;
+        background-image: none;
     }
 
     .sidebar ul li a {
