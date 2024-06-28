@@ -1,3 +1,4 @@
+// Fade out current section, remove active tag, fade in next section, add active tag
 function showSection(sectionId) {
     var sections = document.querySelectorAll('.content');
     sections.forEach(function(section) {
@@ -14,11 +15,4 @@ function showSection(sectionId) {
             }, { once: true });
         }
     });
-    var activeSection = document.querySelector('.content.active');
-    if (!activeSection) {
-        var selectedSection = document.getElementById(sectionId);
-        selectedSection.style.display = 'flex';
-        selectedSection.classList.add('fade-in');
-        selectedSection.classList.add('active');
-    }
 }

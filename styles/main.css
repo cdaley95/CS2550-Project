@@ -5,7 +5,12 @@ body, html {
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
-
+/* 
+Background video set up to be stretched
+across the screen and given a z-index of 
+-1 to ensure it does not go above any of
+the content
+*/
 .background-video {
     position: fixed;
     top: 0;
@@ -13,6 +18,7 @@ body, html {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    background-image: url('../images/altbackground.png');
     z-index: -1;
     display: flex;
     justify-content: center;
@@ -27,7 +33,14 @@ body, html {
     position: absolute;
     object-fit: cover;
 }
-
+/*
+Set up container to display in a
+grid, with the sidebar encompassing
+the left side, padding for visual
+centering on the right side, and the main
+and header content in the center. The
+footer spans the entire bottom.
+*/
 .container {
     display: grid;
     grid-template-areas: 
@@ -39,7 +52,13 @@ body, html {
     height: 100vh;
     width: 100vw;
 }
-
+/*
+Sidebar stays on the top-left of the
+screen until the media query takes effect.
+Additionally, implemented fontawesome icons
+for the sidebar that expands into words with an
+animation when hovered.
+*/
 .sidebar {
     grid-area: sidebar;
     overflow-y: auto;
@@ -57,7 +76,7 @@ body, html {
     background-image: url("../images/repeat.jpg");
     background-repeat: repeat;
     box-shadow: inset 0 0 10px #312201;
-    overflow: hidden;
+    overflow-x: hidden;
     white-space: nowrap;
     transition: min-width 0.3s, max-width 0.3s;
     max-width: 40px;
@@ -102,7 +121,14 @@ body, html {
     min-width: 120px;
     max-width: 120px;
 }
-
+/* 
+Header itself isn't fancy, just the
+title of each section with a repeating
+background image, while also having a
+captioned or uncaptioned image based
+on my preference. Image is dynamically 
+resized.
+*/
 .header {
     grid-area: head; 
     width:100%;
@@ -144,8 +170,13 @@ body, html {
     height: auto;
     max-width: 75vw;
 }
-
+/*
+Main is just an encapsulation that is
+set up with flexbox and dynamically 
+increases or decreases to fit content.
+*/
 main {
+    display: flex;
     grid-area: main;
     padding: 20px;
     box-sizing: border-box;
@@ -153,7 +184,7 @@ main {
     width: fit-content;
     justify-self: center;
 }
-
+/*spooky animation keyframes*/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -171,23 +202,12 @@ main {
         opacity: 0;
     }
 }
-
+/*
+content has no display or opacity
+until active. Opacity is needed for fade
+in and out.
+*/
 .content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    opacity: 0;
-    transition: opacity 0.7s;
-    display: none;
-}
-
-content.show {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-content.hide {
     opacity: 0;
     display: none;
 }
@@ -198,15 +218,20 @@ content.hide {
     align-items: center;
     flex-direction: column;
 }
-
+/*spooky fade in and out times*/
 .fade-out {
-    animation: fadeOut 0.7s forwards;
+    animation: fadeOut 0.8s forwards;
 }
 
 .fade-in {
-    animation: fadeIn 0.7s forwards;
+    animation: fadeIn 0.8s forwards;
 }
-
+/*
+Couldn't come up with a creative name
+for the inside content, so chose incontent.
+Used same background image repeat as with header.
+Used text shadow to contrast the background.
+*/
 .incontent {
     display: flex;
     flex-direction: column;
@@ -226,16 +251,11 @@ content.hide {
         -1px -1px 0 #000,
         1px -1px 0 #000;
 }
-
-.incontent p {
-    color: #fff;
-    text-shadow:
-        1px 1px 0 #000,
-        -1px 1px 0 #000,
-        -1px -1px 0 #000,
-        1px -1px 0 #000;
+/*bad list dots removed*/
+.incontent ul {
+    list-style-type: none;
 }
-
+/*WHY HYPERLINK NO INHERIT?*/
 .incontent p a {
     color: #fff;
     text-shadow:
@@ -244,19 +264,22 @@ content.hide {
         -1px -1px 0 #000,
         1px -1px 0 #000;
 }
-
+/*bolded some text for endings*/
 .incontent .ended {
     font-weight: bold;
 }
-
+/*
+Button div to set up flexbox for row instead
+of columns for buttons
+*/
 .btndiv {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
-
+/*button decorations, hover and click button changes the background radial*/
 .btn {
-    background-image: radial-gradient(rgb(0, 117, 0), rgb(105, 233, 105));
+    background-image: radial-gradient(rgb(0, 95, 0), rgb(78, 175, 78));
     color: black;
     padding: 14px 25px;
     text-align: center;
@@ -273,24 +296,27 @@ content.hide {
 }
 
 .btn:hover, .btn:active {
-    background-color: lightgrey;
+    background-image: radial-gradient(rgb(1, 148, 1), rgb(98, 189, 98));
 }
-
+/*just stay there and be pretty blank space*/
 .padding {
     grid-area: pad;
     background: transparent;
 }
-
+/*
+Footer placed at the very bottom, stretching
+across the entire width of the page, background
+repeating image, and text shawdow for contrast
+*/
 footer {
     grid-area: footer;
     width: 100%;
-    z-index: 100;
+    margin-top: auto;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(57, 134, 57);
     box-sizing: border-box;
     box-shadow: inset 0 0 10px #312201;
     color: white;
@@ -310,112 +336,72 @@ footer {
         -1px -1px 0 #000,
         1px -1px 0 #000;
 }
-
+/*
+Evil media query. I changed from
+grid layout to flex layout as it is
+in only 1 direction
+*/
 @media (max-width: 768px) {
     .container {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        z-index: -2
     }
-
+    /*
+    Sidebar is now top bar... with all the
+    associated pains of it.
+    */
     .sidebar {
         height: auto;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 10px;
-        position: fixed;
+        padding-right: 40px;
+        align-self: center;
         top: 0;
         left: 0;
-        width: 95%;
-        overflow: clip;
+        width: 100%;
         z-index: 1;
+        margin-bottom: auto;
     }
+
 
     .sidebar ul {
         box-shadow: inset 0 0 10px #312201;
         background-image: url("../images/repeat.jpg");
         background-repeat: repeat;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 100%;
+        justify-self: center;
+        align-self: center;
+        width: 80%;
     }
-
+    /*
+    Looks better when the items don't have background image
+    and shadow along the top.
+    */
     .sidebar ul li {
         box-shadow: none;
-        overflow: hidden;
-        white-space: nowrap;
-        transition: min-width 0.3s, max-width 0.3s;
-        max-width: 40px;
-        min-width: 40px;
-        display: flex;
-        align-items: center;
         background-image: none;
     }
-
-    .sidebar ul li a {
-        color: white;
-        text-shadow:
-            1px 1px 0 #000,
-            -1px 1px 0 #000,
-            -1px -1px 0 #000,
-            1px -1px 0 #000;
-        text-decoration: none;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        transition: background 0.3s, max-width 0.3s;
-    }
-
-    .sidebar ul li a i {
-        margin-right: 10px;
-        min-width: 28px;
-    }
-
-    .sidebar ul li a span {
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .sidebar ul li:hover {
-        min-width: 120px;
-        max-width: 120px;
-    }
-
+    /*needed more breathing room to accomodate the nav bar*/
     .header {
-        grid-area: header;
         margin-top: 40px;
         padding: 0px;
         box-sizing: border-box;
-        color: white;
         text-align: center;
     }
 
     main {
-        grid-area: main;
         margin-top: 0px;
         padding: 0px;
         box-sizing: border-box;
         color: white;
     }
-
+    /*display buttons in a column now for the smaller screen*/
     .btndiv {
         flex-direction: column;
-    }
-
-    footer {
-        grid-area: footer;
-        margin-top: 20px;
-        padding: 20px;
-        box-sizing: border-box;
-        color: white;
-        text-align: center;
-        bottom: 0;
-        width: 100%;
-        height: 2.5rem;
     }
 }

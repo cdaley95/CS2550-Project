@@ -1,8 +1,34 @@
 <!DOCTYPE html>
+<!--
+Project:  Project3-Responsive Web Site-Small Adventure
+Name: Corey Daley
+Submitted: 6/28/2024
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+ 
+Reflection (1-2 paragraphs):
+
+This project was a struggle for me, primarily because I have a massive wirter's block,
+and also because it's not really a topic I wanted to choose per-say, but some of my
+interests may have seemed a little bit controversial. As a result, I avoided some of 
+what I wanted and forced myself to pigeonhole into a "choose your adventure" format.
+This probably wasn't the best option, since it forced me to come up with a ton more
+sections than what was probably required for this project.
+
+What was fun was setting up the animations for phasing in and out the page. It required
+me to utilize javascript to add and remove active tags from each section, and make sure to
+implement fading in and out at the right orders. Early on, it would fade out then jarringly
+pop back in rather than smoothly transition right in. It took a little bit to make sure it 
+was implemented in the correct order so as to prevent a jarring pop-in or out.
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journey in the Forest</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -37,9 +63,11 @@
                     </figure>
                 </header>
                 <article class="incontent">
-                    <p>You stand at the edge of a dense forest, the sun filtering through the leaves, casting dappled shadows on the ground.
+                    <p>
+                        You stand at the edge of a dense forest, the sun filtering through the leaves, casting dappled shadows on the ground.
                         The path before you beckons, an invitation to explore the unknown. The air is fresh and filled with the scent of pine and earth.
-                        Birds sing from the treetops, and a light breeze rustles the leaves. You take a deep breath, feeling the weight of decision.</p>
+                        Birds sing from the treetops, and a light breeze rustles the leaves. You take a deep breath, feeling the weight of decision.
+                    </p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('branch1')">
                             Enter the forest
@@ -60,10 +88,12 @@
                     </figure>
                 </header>
                 <article class="incontent">
-                    <p>You step into the forest, the sound of birdsong and the rustle of leaves greeting you.
+                    <p>
+                        You step into the forest, the sound of birdsong and the rustle of leaves greeting you.
                         Ahead, the path splits into two. The left path is narrow, winding deeper into the forest, while the right path is wider and well-trodden.
                         The forest feels alive around you, with the rustling of small creatures in the underbrush and the distant call of a woodpecker echoing through the trees.
-                        Which path will you take?</p>
+                        Which path will you take?
+                    </p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('ending1')">
                             Take the left path
@@ -86,10 +116,12 @@
                     </figure>
                 </header>
                 <article class="incontent">
-                    <p>The right path is well-trodden, leading you to a small clearing with two further options.
+                    <p>
+                        The right path is well-trodden, leading you to a small clearing with two further options.
                         The path forks again, one leading to a sturdy wooden bridge, the other to an overgrown, less-traveled route.
                         The air is filled with the scent of wildflowers, and you can hear the distant sound of running water.
-                        You pause for a moment, considering your options. Will you take the bridge or the overgrown path, or return to the previous fork?</p>
+                        You pause for a moment, considering your options. Will you take the bridge or the overgrown path, or return to the previous fork?
+                    </p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('branch3')">
                             Take the overgrown path
@@ -112,9 +144,11 @@
                     </figure>
                 </header>
                 <article class="incontent">
-                    <p>The overgrown path is narrow and difficult to navigate, but it leads you to another fork in the road.
+                    <p>
+                        The overgrown path is narrow and difficult to navigate, but it leads you to another fork in the road.
                         The foliage thickens, and you find yourself in a more untamed part of the forest. The air is cooler here, and the sounds of the forest are more pronounced.
-                        You feel a sense of adventure as you push through the underbrush, discovering a hidden part of the forest that few have seen. Which path will you take?</p>
+                        You feel a sense of adventure as you push through the underbrush, discovering a hidden part of the forest that few have seen. Which path will you take?
+                    </p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('ending3')">
                             Cross the stream
@@ -138,8 +172,10 @@
                     </figure>
                 </header>
                 <article class="incontent">
-                    <p>You decide not to enter the forest, turning back to the familiar comforts of home. Perhaps another day, you'll explore the mysteries of the forest.
-                        For now, you are content to leave the adventure for another time, carrying the sense of curiosity and wonder with you.</p>
+                    <p>
+                        You decide not to enter the forest, turning back to the familiar comforts of home. Perhaps another day, you'll explore the mysteries of the forest.
+                        For now, you are content to leave the adventure for another time, carrying the sense of curiosity and wonder with you.
+                    </p>
                 </article>
             </section>
             <section class="content" id="ending1">
@@ -151,13 +187,15 @@
                     </figure>
                 </header>
                 <article class="incontent">
-                    <p>The left path winds deeper into the forest, the trees closing in around you.
+                    <p>
+                        The left path winds deeper into the forest, the trees closing in around you.
                         The canopy above thickens, casting dappled shadows on the forest floor.
                         After walking for a while, you find yourself in a peaceful clearing surrounded by tall trees.
                         The sunlight filters through the leaves, creating a serene, almost magical atmosphere.
                         You sit on a fallen log, the gentle breeze rustling the leaves, and feel a sense of calm wash over you.
                         This is a place where time seems to stand still, a perfect spot to rest and reflect on your journey.
-                        You can choose to return to the start or go back to the fork.</p>
+                        You can choose to return to the start or go back to the fork.
+                    </p>
                     <p class="ended">Ending 1: You find a peaceful clearing, a perfect spot to rest and reflect.</p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('home')">
@@ -178,10 +216,12 @@
                     </figure>
                 </header>
                 <article class="incontent">
-                    <p>The bridge creaks under your feet as you cross a sparkling stream. On the other side, you find a quaint cabin nestled among the trees.
+                    <p>
+                        The bridge creaks under your feet as you cross a sparkling stream. On the other side, you find a quaint cabin nestled among the trees.
                         Smoke curls from the chimney, and the smell of woodsmoke and pine fills the air.
                         You approach the cabin and peek inside to find a warm, inviting space. A fire crackles in the hearth, and a cozy chair sits by the window, offering a view of the forest outside.
-                        The cabin offers warmth and shelter, a cozy retreat from the world. You decide to stay a while, enjoying the comfort and solitude. Will you go back to the fork or return to the start?</p>
+                        The cabin offers warmth and shelter, a cozy retreat from the world. You decide to stay a while, enjoying the comfort and solitude. Will you go back to the fork or return to the start?
+                    </p>
                     <p class="ended">Ending 2: The cabin offers warmth and shelter, a cozy retreat from the world.</p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('home')">
@@ -202,11 +242,13 @@
                     </figure>
                 </header>
                 <article class="incontent">
-                    <p>You carefully wade across the stream, the cool water refreshing your feet.
+                    <p>
+                        You carefully wade across the stream, the cool water refreshing your feet.
                         On the other side, a hidden waterfall awaits. The sound of rushing water is soothing, and you spot a small, secluded pool at the base of the waterfall.
                         You sit on a rock, watching the water cascade down, creating a fine mist that cools the air.
                         This hidden gem within the forest is a perfect spot to rest and admire nature's beauty. You spend some time here, feeling rejuvenated by the tranquil surroundings.
-                        Will you go back to the fork or return to the start?</p>
+                        Will you go back to the fork or return to the start?
+                    </p>
                     <p class="ended">Ending 3: The waterfall is a breathtaking sight, a hidden gem within the forest.</p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('home')">
@@ -227,9 +269,11 @@
                     </figure>
                 </header>
                 <article class="incontent">
-                    <p>The high path climbs steadily, offering stunning views of the forest canopy below. After a challenging hike, you reach the top, where a panoramic vista stretches out before you.
+                    <p>
+                        The high path climbs steadily, offering stunning views of the forest canopy below. After a challenging hike, you reach the top, where a panoramic vista stretches out before you.
                         The sunset casts a golden glow over the landscape, painting the sky with hues of pink and orange. You sit on a rocky outcrop, taking in the breathtaking scenery and feeling a sense of accomplishment.
-                        The beauty of this moment makes the journey worthwhile. Will you go back to the fork or return to the start?</p>
+                        The beauty of this moment makes the journey worthwhile. Will you go back to the fork or return to the start?
+                    </p>
                     <p class="ended">Ending 4: At the top, you find a panoramic vista, a perfect spot to watch the sunset.</p>
                     <div class="btndiv">
                         <a class="btn" href="#" onclick="showSection('home')">
@@ -279,7 +323,49 @@
                     </figure>
                 </header>
                 <article class="incontent">
-                    <p>placeholder for the guide page after verification</p>
+                    <ul>
+                        <li>
+                            <p>
+                                <a href="#" onclick="showSection('home')">Journey in the Forest (Start):</a>
+                                Choosing to proceed brings you to the <a href="#" onclick="showSection('branch1')">first branch</a>
+                                while choosing to leave brings you to the <a href="#" onclick="showSection('leaving')">leaving ending.</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#" onclick="showSection('branch1')">Forest Fork (Branch 1):</a>
+                                Choosing the left path brings you to the <a href="#" onclick="showSection('ending1')">first ending</a>
+                                while choosing the right path brings you to the <a href="#" onclick="showSection('branch2')">second branch.</a>
+                                Choosing to go back brings you to the <a href="#" onclick="showSection('home')">start.</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#" onclick="showSection('branch2')">Whispering Fork (Branch 2):</a>
+                                Choosing the overgrown path brings you to the <a href="#" onclick="showSection('branch3')">third branch</a>
+                                while choosing the bridge path brings you to the <a href="#" onclick="showSection('ending2')">second ending.</a>
+                                Choosing to go back brings you to the <a href="#" onclick="showSection('branch1')">first branch.</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#" onclick="showSection('branch2')">Hidden Trail (Branch 3):</a>
+                                Choosing to cross the stream brings you to the <a href="#" onclick="showSection('ending3')">third ending</a>
+                                while taking the high path brings you to the <a href="#" onclick="showSection('ending4')">fourth ending.</a>
+                                Choosing to go back brings you to the <a href="#" onclick="showSection('branch2')">second branch.</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Each ending allows you to go back to the start or go back to the previous branch.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#" onclick="showSection('endings_list')">Here</a> are the list of endings.
+                            </p>
+                        </li>
+                    </ul>
                 </article>
             </section>
             <!--Endings list-->
@@ -307,7 +393,31 @@
                     </figure>
                 </header>
                 <article class="incontent">
-                    <p>placeholder for the endings list page</p>
+                    <h2>Leaving Ending</h2>
+                    <p>
+                        <a href=# onclick="showSection('leaving')">Return to Comfort:</a>
+                        Choosing familiarity, the forest's mysteries await another day.
+                    </p>
+                    <h2>Ending 1</h2>
+                    <p>
+                        <a href=# onclick="showSection('ending1')">Serenity Clearing:</a>
+                        A tranquil clearing in the heart of the forest offers a peaceful refuge.
+                    </p>
+                    <h2>Ending 2</h2>
+                    <p>
+                        <a href=# onclick="showSection('ending2')">Homestead Crossing:</a>
+                        A rustic cabin by a babbling brook beckons with warmth and solace.
+                    </p>
+                    <h2>Ending 3</h2>
+                    <p>
+                        <a href=# onclick="showSection('ending3')">Waterfall Haven:</a>
+                        Discovering a hidden waterfall, nature's beauty unfolds in serene splendor.
+                    </p>
+                    <h2>Ending 4</h2>
+                    <p>
+                        <a href=# onclick="showSection('ending4')">Sunset Ridge:</a>
+                        Atop a rugged path, a breathtaking sunset paints the forest in hues of gold.
+                    </p>
                 </article>
             </section>
         </main>
