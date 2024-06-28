@@ -150,6 +150,8 @@ main {
     padding: 20px;
     box-sizing: border-box;
     color: white;
+    width: fit-content;
+    justify-self: center;
 }
 
 @keyframes fadeIn {
