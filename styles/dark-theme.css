@@ -1,0 +1,45 @@
+.background-video {
+	    background-image: url('../images/altdarkbackground.png');
+}
+
+.sidebar ul li {
+    background-image: url("../images/darkrepeat.jpg");
+}
+
+#themebtn {
+    background-image: radial-gradient(rgb(3, 30, 61), rgb(29, 114, 163));
+}
+
+.themebtn:hover, .themebtn:active {
+    background-image: radial-gradient(rgb(3, 30, 61), rgb(29, 114, 163));
+}
+
+.header h1 {
+    background-image: url("../images/darkrepeat.jpg");
+}
+
+.captimage {
+    background-image: url("../images/darkrepeat.jpg");
+}
+
+.incontent {
+    background-image: url("../images/darkrepeat.jpg");
+}
+
+.btn {
+    background-image: radial-gradient(rgb(3, 30, 61), rgb(29, 114, 163));
+}
+
+.btn:hover, .btn:active {
+    background-image: radial-gradient(rgb(3, 30, 61), rgb(29, 114, 163));
+}
+
+.footer-content {
+    background-image: url("../images/darkrepeat.jpg");
+}
+
+@media (max-width: 768px) {
+    .sidebar ul {
+        background-image: url("../images/darkrepeat.jpg");
+    }
+}

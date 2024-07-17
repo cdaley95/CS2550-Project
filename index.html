@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--
-Project:  Project3-Responsive Web Site-Small Adventure
+Project: Project 4-Responsive Web Site-CSS Theme and Refactor
 Name: Corey Daley
-Submitted: 6/28/2024
+Submitted: TBD
  
 I declare that the following source code was written by me, or provided
 by the instructor for this project. I understand that copying source
@@ -13,31 +13,21 @@ in a zero grade, a permanent record on file and possibly immediate failure of th
  
 Reflection (1-2 paragraphs):
 
-This project was a struggle for me, primarily because I have a massive wirter's block,
-and also because it's not really a topic I wanted to choose per-say, but some of my
-interests may have seemed a little bit controversial. As a result, I avoided some of 
-what I wanted and forced myself to pigeonhole into a "choose your adventure" format.
-This probably wasn't the best option, since it forced me to come up with a ton more
-sections than what was probably required for this project.
-
-What was fun was setting up the animations for phasing in and out the page. It required
-me to utilize javascript to add and remove active tags from each section, and make sure to
-implement fading in and out at the right orders. Early on, it would fade out then jarringly
-pop back in rather than smoothly transition right in. It took a little bit to make sure it 
-was implemented in the correct order so as to prevent a jarring pop-in or out.
 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Journey in the Forest</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link id="themeOverride" rel="stylesheet" href="styles/dark-theme.css" disabled>
     <link rel="icon" type="image/*" href="images/favicon.png"/>
 </head>
 <body>
     <div class="background-video">
         <video autoplay muted loop id="bgVideo">
-            <source src="videos/bgvid.mp4" type="video/mp4">
+            <source id="bgVid" src="videos/bgvid.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
     </div>
@@ -51,7 +41,9 @@ was implemented in the correct order so as to prevent a jarring pop-in or out.
                 <li><a href="#" onclick="showSection('endings')"><i class=" fas fa-flag"></i><span>Endings</span></a></li>
             </ul>
         </nav>
-
+        <div class="padded-cont">
+            <a id="themebtn" href="#" onclick="changeTheme()">Dark Mode</a>
+        </div>
         <main>
             <!--Home-->
             <section class="content active" id="home">
@@ -326,14 +318,14 @@ was implemented in the correct order so as to prevent a jarring pop-in or out.
                     <ul>
                         <li>
                             <p>
-                                <a href="#" onclick="showSection('home')">Journey in the Forest (Start):</a>
+                                <a href="#" onclick="showSection('home')">Journey in the Forest (Start):</a><br>
                                 Choosing to proceed brings you to the <a href="#" onclick="showSection('branch1')">first branch</a>
                                 while choosing to leave brings you to the <a href="#" onclick="showSection('leaving')">leaving ending.</a>
                             </p>
                         </li>
                         <li>
                             <p>
-                                <a href="#" onclick="showSection('branch1')">Forest Fork (Branch 1):</a>
+                                <a href="#" onclick="showSection('branch1')">Forest Fork (Branch 1):</a><br>
                                 Choosing the left path brings you to the <a href="#" onclick="showSection('ending1')">first ending</a>
                                 while choosing the right path brings you to the <a href="#" onclick="showSection('branch2')">second branch.</a>
                                 Choosing to go back brings you to the <a href="#" onclick="showSection('home')">start.</a>
@@ -341,7 +333,7 @@ was implemented in the correct order so as to prevent a jarring pop-in or out.
                         </li>
                         <li>
                             <p>
-                                <a href="#" onclick="showSection('branch2')">Whispering Fork (Branch 2):</a>
+                                <a href="#" onclick="showSection('branch2')">Whispering Fork (Branch 2):</a><br>
                                 Choosing the overgrown path brings you to the <a href="#" onclick="showSection('branch3')">third branch</a>
                                 while choosing the bridge path brings you to the <a href="#" onclick="showSection('ending2')">second ending.</a>
                                 Choosing to go back brings you to the <a href="#" onclick="showSection('branch1')">first branch.</a>
@@ -349,7 +341,7 @@ was implemented in the correct order so as to prevent a jarring pop-in or out.
                         </li>
                         <li>
                             <p>
-                                <a href="#" onclick="showSection('branch2')">Hidden Trail (Branch 3):</a>
+                                <a href="#" onclick="showSection('branch2')">Hidden Trail (Branch 3):</a><br>
                                 Choosing to cross the stream brings you to the <a href="#" onclick="showSection('ending3')">third ending</a>
                                 while taking the high path brings you to the <a href="#" onclick="showSection('ending4')">fourth ending.</a>
                                 Choosing to go back brings you to the <a href="#" onclick="showSection('branch2')">second branch.</a>

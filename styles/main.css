@@ -1,4 +1,10 @@
-/*TODO: Fix footer height */
+/*
+Fixed footer height to look more pleasing
+Not CSS related, but changed the "Guide" section to look
+and feel a bit better in the HTML, set up the theme
+toggle button to move to the footer upon media query hit.
+*/
+
 body, html {
     margin: 0;
     padding: 0;
@@ -45,7 +51,7 @@ footer spans the entire bottom.
 .container {
     display: grid;
     grid-template-areas: 
-        "sidebar head pad"
+        "sidebar head theme"
         "sidebar main pad"
         "footer footer footer";
     grid-template-columns: 120px 1fr 120px;
@@ -122,6 +128,39 @@ animation when hovered.
     min-width: 120px;
     max-width: 120px;
 }
+
+/*
+created a button to toggle the theme
+*/
+
+.padded-cont {
+    grid-area: theme;
+}
+
+.padded-cont #themebtn {
+    display: inline-block;
+}
+
+#themebtn {
+    background-image: radial-gradient(rgb(0, 95, 0), rgb(78, 175, 78));
+    color: black;
+    padding: 14px 5px;
+    text-align: center;
+    border: 1px solid black;
+    text-decoration: none;
+    color: white;
+    text-shadow:
+        1px 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
+    box-shadow: 0 0 10px #312201;
+}
+
+.themebtn:hover, .themebtn:active {
+    background-image: radial-gradient(rgb(1, 148, 1), rgb(98, 189, 98));
+}
+
 /* 
 Header itself isn't fancy, just the
 title of each section with a repeating
@@ -136,7 +175,7 @@ resized.
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     color: white;
     text-shadow:
         1px 1px 0 #000,
@@ -317,6 +356,7 @@ footer {
 
 .footer-content {
     display: flex;
+    padding: 20px;
     justify-content: space-around;
     box-sizing: border-box;
     box-shadow: inset 0 0 10px #312201;
@@ -367,7 +407,6 @@ in only 1 direction
         margin-bottom: auto;
     }
 
-
     .sidebar ul {
         box-shadow: inset 0 0 10px #312201;
         background-image: url("../images/repeat.jpg");
@@ -393,6 +432,14 @@ in only 1 direction
         padding: 0px;
         box-sizing: border-box;
         text-align: center;
+    }
+
+    .padded-cont #themebtn {
+        display: none;
+    }
+
+    .footer-content #themebtn {
+        display: inline-block;
     }
 
     main {
