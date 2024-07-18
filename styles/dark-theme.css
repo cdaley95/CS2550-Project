@@ -1,3 +1,13 @@
+
+/*
+Changed background image to reflect dark mode changes if
+background video is not present, changed repeating
+background images for elements to a darker wood, 
+changed the radial gradients for the buttons from 
+a radial green to radial dark blue to fit dark theme.
+
+See also the notes in the scripts file for changes made.
+*/
 .background-video {
 	    background-image: url('../images/altdarkbackground.png');
 }
@@ -10,8 +20,8 @@
     background-image: radial-gradient(rgb(3, 30, 61), rgb(29, 114, 163));
 }
 
-.themebtn:hover, .themebtn:active {
-    background-image: radial-gradient(rgb(3, 30, 61), rgb(29, 114, 163));
+#themebtn:hover, #themebtn:active {
+    background-image: radial-gradient(rgb(6, 54, 110), rgb(41, 154, 219));
 }
 
 .header h1 {
@@ -31,7 +41,7 @@
 }
 
 .btn:hover, .btn:active {
-    background-image: radial-gradient(rgb(3, 30, 61), rgb(29, 114, 163));
+    background-image: radial-gradient(rgb(6, 54, 110), rgb(41, 154, 219));
 }
 
 .footer-content {

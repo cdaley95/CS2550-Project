@@ -157,7 +157,7 @@ created a button to toggle the theme
     box-shadow: 0 0 10px #312201;
 }
 
-.themebtn:hover, .themebtn:active {
+#themebtn:hover, #themebtn:active {
     background-image: radial-gradient(rgb(1, 148, 1), rgb(98, 189, 98));
 }
 
