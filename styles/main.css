@@ -217,11 +217,13 @@ increases or decreases to fit content.
 */
 main {
     display: flex;
+    flex-direction: column;
+    align-self: center;
     grid-area: main;
     padding: 20px;
     box-sizing: border-box;
     color: white;
-    width: fit-content;
+    width: 80%;
     justify-self: center;
 }
 /*spooky animation keyframes*/
@@ -279,11 +281,12 @@ Used text shadow to contrast the background.
     background-repeat: repeat;
     box-sizing: border-box;
     box-shadow: inset 0 0 10px #312201;
-    width: 80%;
+    width: 100%;
+    max-width: 1200px;
     align-items: center;
     text-align: center;
     padding: 30px;
-    margin: 20px;
+    margin: 20px auto;
     color: #fff;
     text-shadow:
         1px 1px 0 #000,
@@ -294,6 +297,7 @@ Used text shadow to contrast the background.
 /*bad list dots removed*/
 .incontent ul {
     list-style-type: none;
+    width: 100%;
 }
 /*WHY HYPERLINK NO INHERIT?*/
 .incontent p a {
@@ -333,6 +337,97 @@ of columns for buttons
         -1px -1px 0 #000,
         1px -1px 0 #000;
     box-shadow: 0 0 10px #312201;
+}
+
+.flexform {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.horizitems {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.horizitems2 {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    background-image: url("../images/darkrepeat.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-clip: padding-box;
+}
+
+.vertval {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.vertval input, 
+.vertval label {
+    display:block;
+    max-width: 100%;
+}
+
+.usrinput {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.9); /* Ensure input fields have a background */
+}
+
+.state {
+    width: 4ch;
+    align-self: center;
+}
+
+.zip {
+    max-width: 11ch;
+    min-width: 11ch;
+    align-self: center;
+}
+
+.errorMsg {
+    color: red;
+}
+
+input.was-validated:valid {
+    color: green;
+    border: 1px solid green;
+}
+
+input.was-validated:invalid {
+    color: red;
+    border: 1px solid red;
+}
+  
+input.was-validated:invalid ~ div {
+    display: block;
+}
+
+input:valid ~ div {
+    display: none;
+}
+  
+input:invalid ~ div {
+    display: none;
 }
 
 .btn:hover, .btn:active {
@@ -382,6 +477,12 @@ Evil media query. I changed from
 grid layout to flex layout as it is
 in only 1 direction
 */
+@media (max-width: 1036px) {
+    .horizitems {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         display: flex;

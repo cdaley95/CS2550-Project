@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--
-Project: Project 4-Responsive Web Site-CSS Theme and Refactor
+Project: Project 5-Personal Web Site-Visitor Form Validation-Refactor JS
 Name: Corey Daley
-Submitted: 7/18/2024
+Submitted: TBD
  
 I declare that the following source code was written by me, or provided
 by the instructor for this project. I understand that copying source
@@ -12,17 +12,6 @@ I acknowledge that  If I am found in violation of this policy this may result
 in a zero grade, a permanent record on file and possibly immediate failure of the class.
  
 Reflection (1-2 paragraphs):
-
-This project wasn't as difficult as the previous project, since the overall framework was
-already implemented in project 3. Because I had already went light on the variety of colors
-for the site itself, There was very little to change to make the site look substantially different
-for the dark theme.
-
-Probably the most difficult part (if you can call it difficult) was implementing javascript to change
-the background video. Due to the previous zybooks lessons regarding javascript, it was relatively trivial
-to change the src in the source tag to the video I created for dark mode. The only thing that was a bit of
-a struggle was reloading the HTML element, I was trying for the longest time to reload the source tag rather
-then the video tag.
 -->
 <html lang="en">
 <head>
@@ -428,11 +417,102 @@ then the video tag.
                     <h1>Visitor Registration Form</h1>
                 </header>
                 <article class="incontent">
-                    <!---TODO: Create validation form here with submit button-->
+                    <form id="myform" novalidate method="GET" onsubmit="return validateForm()">
+                        <ul class="flexform">
+                            <li>
+                                <h2>Welcome to my site! Please fill out the visitor registration form.</h2>
+                            </li>
+                            <li class="horizitems">
+                                <div class="vertval">
+                                    <label for="firstname">First name</label>
+                                    <input class="usrinput" id="firstname" type="text" placeholder="Your first name here" required>
+                                    <div class="errorMsg" id="firstname-error"></div>
+                                </div>
+                                <div class="vertval">
+                                    <label for="lastname">Last name</label>
+                                    <input class="usrinput" id="lastname" type="text" placeholder="Your last name here" required>
+                                    <div class="errorMsg" id="lastname-error"></div>
+                                </div>
+                            </li>
+                            <li class="horizitems">
+                                <div class="vertval">
+                                    <label for="address">Address</label>
+                                    <input class="usrinput" id="address" type="text" placeholder="Your address" required>
+                                    <div class="errorMsg" id="address-error"></div>
+                                </div>
+                            </li>
+                            <li class="horizitems">
+                                <div class="vertval">
+                                    <label for="city">City</label>
+                                    <input class="usrinput" id="city" type="text" placeholder="Your city" required>
+                                    <div class="errorMsg" id="city-error"></div>
+                                </div>
+                                <div class="vertval">
+                                    <label for="state" class="state">State</label>
+                                    <input class="usrinput" id="state" type="text" placeholder="Your state" maxlength="2" size="2" required>
+                                    <div class="errorMsg" id="state-error"></div>
+                                </div>
+                                <div class="vertval">
+                                    <label for="zip" class="zip">Zip</label>
+                                    <input class="usrinput" class="zip" id="zip" type="text" placeholder="Zip" maxlength="10" size="10" required>
+                                    <div class="errorMsg" id="zip-error"></div>
+                                </div>
+                            </li>
+                            <li class="horizitems">
+                                <div class="vertval">
+                                    <label for="phone">Phone</label>
+                                    <input class="usrinput" id="phone" type="text" placeholder="Your phone" required>
+                                    <div class="errorMsg" id="phone-error"></div>
+                                </div>
+                                <div class="vertval">
+                                    <label for="email">Email</label>
+                                    <input class="usrinput" id="email" type="text" placeholder="Email">
+                                    <div class="errorMsg" id="email-error"></div>
+                                </div>
+                            </li>
+                            <li class="horizitems">
+                                <div class="vertval">
+                                    <h3>How did you find my website?</h3>
+                                    <div class="horizitems2">
+                                        <input type="checkbox" id="google" name="find-page" value="google">
+                                        <label for="google">Google Search</label>
+                                    </div>
+                                    <div class="horizitems2">
+                                        <input type="checkbox" id="friend" name="find-page" value="friend">
+                                        <label for="friend">Friend</label>
+                                    </div>
+                                    <div class="horizitems2">
+                                        <input type="checkbox" id="newspaper" name="find-page" value="newspaper">
+                                        <label for="newspaper">News Paper</label>
+                                    </div>
+                                    <div class="horizitems2">
+                                        <input type="checkbox" id="uvu" name="find-page" value="uvu">
+                                        <label for="uvu">UVU</label>
+                                    </div>
+                                    <div class="errorMsg" id="find-page-error"></div>
+                                </div>
+                                <div class="vertval">
+                                    <label for="comment">Comments</label>
+                                    <textarea rows="10" id="comment" placeholder="Enter your comments here"></textarea>
+                                </div>
+                            </li>
+                            <li>
+                                <button type="submit" class="btn">Submit</button>
+                            </li>
+                        </ul>
+                    </form>
+                </article>
+            </section>
+            <!--validation form success-->
+            <section class="content" id="valform-success">
+                <article class="incontent">
+                    <h2>Thank you for registering!</h2>
+                    <a class="btn" href="#" onclick="showSection('home')">
+                        Home
+                    </a>
                 </article>
             </section>
         </main>
-
         <footer>
             <div class="footer-content">
                 <a class="btn" href="https://preeminent-pie-613ecd.netlify.app">About Me</a>
@@ -441,6 +521,8 @@ then the video tag.
             </div>
         </footer>
     </div>
-    <script src="scripts/main.js"></script>
+    <script defer src="scripts/validate.js"></script>
+    <script defer src="scripts/page.js"></script>
+    <script defer src="scripts/main.js"></script>
 </body>
 </html>

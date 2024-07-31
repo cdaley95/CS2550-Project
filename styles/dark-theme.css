@@ -44,6 +44,10 @@ See also the notes in the scripts file for changes made.
     background-image: radial-gradient(rgb(6, 54, 110), rgb(41, 154, 219));
 }
 
+.horizitems2 {
+    background-image: url("../images/repeat.jpg");
+}
+
 .footer-content {
     background-image: url("../images/darkrepeat.jpg");
 }
