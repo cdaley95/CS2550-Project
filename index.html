@@ -2,7 +2,7 @@
 <!--
 Project: Project 5-Personal Web Site-Visitor Form Validation-Refactor JS
 Name: Corey Daley
-Submitted: TBD
+Submitted: 7/31/2024
  
 I declare that the following source code was written by me, or provided
 by the instructor for this project. I understand that copying source
@@ -12,6 +12,22 @@ I acknowledge that  If I am found in violation of this policy this may result
 in a zero grade, a permanent record on file and possibly immediate failure of the class.
  
 Reflection (1-2 paragraphs):
+Most of the CSS formatting was already taken care of when I started implementing the 
+registration form. Create a section with the class "content", set up a header, do
+the article wiht the class "incontent", and most of the styling was basically done. 
+What I didn't anticipate, but probably should have, was minor formatting to make the 
+text fields fit nicely and look good, since the label needed to be vertical from the 
+text fields, and making everything vertical from the get-go doesn't look pretty on
+a desktop format. However, it wasn't that huge of a deal.
+
+The largest trouble was getting the regex and validation to work out. It was mostly
+a me problem though, because I went strictly based on due dates for this assignment
+and didn't do part B of the forms section on zybooks, only opting to go with part A. 
+As a result, I struggled and looked around online for information on how to implement
+validation with the regexes instead of doing what I was supposed to do and run through
+part B of form validation for zybooks, which would have made it infinitely easier for me
+after working on the examples and labs. On the bright side, struggling on this project did
+make going through the last part of zybooks a cakewalk.
 -->
 <html lang="en">
 <head>
@@ -417,7 +433,7 @@ Reflection (1-2 paragraphs):
                     <h1>Visitor Registration Form</h1>
                 </header>
                 <article class="incontent">
-                    <form id="myform" novalidate method="GET" onsubmit="return validateForm()">
+                    <form id="myform" method="POST" onsubmit="return validateForm()">
                         <ul class="flexform">
                             <li>
                                 <h2>Welcome to my site! Please fill out the visitor registration form.</h2>

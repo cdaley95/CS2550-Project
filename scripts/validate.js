@@ -47,8 +47,15 @@ function inputBlurred(ev) {
     
     if (type === 'text') {
         // For text-based inputs
-        checkRequired(id, "This field is required");
-        if (id === 'email') {
+        if (id === 'firstname') {
+            checkRequired("firstname", "First Name is Required");
+        } else if (id === 'lastname') {
+            checkRequired("lastname", "Last Name is Required");
+        } else if (id === 'address') {
+            checkRequired("address", "Address is Required");
+        } else if (id === 'city') {
+            checkRequired("city", "City is Required");
+        } else if (id === 'email') {
             checkFormat(id, "Email must be in *@*.* format", emailRegex);
         } else if (id === 'zip') {
             checkFormat(id, `Malformed zip-code, please use either "#####", or "#####-#### format.`, zipCodeRegex);
